@@ -58,28 +58,11 @@ public class MathTrick {
 	}
 	
 	// Step 3: Find the difference between the larger and smaller number
-	public static int difference (int num) {
-		// Declare and initialize difference var
-		int difference = 0;
+	public static int difference(int num1, int num2) {
+		int min = Math.min(num1, num2);
+		int max = Math.max(num1, num2);
 
-		// Find the last digit
-		int lastDigit = num%10;
-		
-		// Find the first digit
-		int firstDigit = num/100;
-
-		// Find the difference
-		if (lastDigit > firstDigit) {
-			difference = lastDigit - firstDigit;
-		}
-		else if (firstDigit > lastDigit) {
-			difference = firstDigit - lastDigit;
-		}
-		else {
-			difference = lastDigit - firstDigit;
-		}
-
-		return difference;
+		return max - min;
 	}
 
 	// Step 4: Add reversed number to the difference
@@ -155,23 +138,25 @@ public class MathTrick {
 		
 	public static void main(String[] args) 
 	{
-		getRandomNum();
         //		1.	Generate a random 3-digit number so that the first and third digits differ by more than one.
-        
+		int num = getRandomNum();
         //		2.	Now reverse the digits to form a second number.
-        
+        int reversed = reverseDigits(num);
         //		3.	Subtract the smaller number from the larger one.
-        
+        int difference = difference(num, reversed);
         //		4.	Now reverse the digits in the answer you got in step 3 and add it to that number.
-        
+		difference += reverseDigits(difference);
         //		5.	Multiply by one million.
-        
+        difference *= 1000000;
         //		6.	Subtract 733,361,573.
-        
+        difference -= 733361573;
         //		7.	Convert the number to a string in order to replace the numbers with letters.
         // 				Ex: String str = String.valueOf(myNumber);
         //			Then, replace each of the digits in your answer, with the letter it corresponds to using the table in the instructions.
-        
+        String str = String.valueOf(difference);
+		String replaced = replaceLtr(str);
+		String reversedString = reverseString(replaced);
         //		8.	Now reverse the letters in the string to read your message backward.
+		System.out.println(reversedString);
 	} // end main
 } // end class
