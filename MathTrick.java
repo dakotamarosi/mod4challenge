@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /**
  * This program is written for the FLVS AP CS A 4.07 Challenge Program. 
  * It is intended to perform a few "math tricks" by calling different methods.
@@ -70,26 +72,28 @@ public class MathTrick {
 	// Hint: Loop through the String and "replace" the numbers with the corresponding letter
 	public static String replaceLetter(String str)
 	{
-		String zero = "Y";
-		String one = "M";
-		String two = "P";
-		String three = "L";
-		String four = "R";
-		String five = "O";
-		String six = "F";
-		String sevne = "A";
-		String eight = "I";
-		String nine = "B";
+		HashMap<Character, Character> replacements = new HashMap<>();
+		replacements.put('0', 'Y');
+		replacements.put('1', 'M');
+		replacements.put('2', 'P');
+		replacements.put('3', 'L');
+		replacements.put('4', 'R');
+		replacements.put('5', 'O');
+		replacements.put('6', 'F');
+		replacements.put('7', 'A');
+		replacements.put('8', 'I');
+		replacements.put('9', 'B');
 		
-		int length = str.length();
-		int counter = 0;
+		String replaced = "";
 
-		while (counter < length) {
-			
+		for (int i = 0; i < str.length(); i++) {
+			char current = str.charAt(i);
+			char newChar = replacements.get(current);
+
+			replaced += newChar;
 		}
 
-
-		return "";
+		return replaced;
 		// complete the method		
 	}
 	
@@ -98,14 +102,20 @@ public class MathTrick {
 	//		 loop through the original word   
 	//		 add one letter at time to the new variable using concatenation and .substring()
 	public static String reverseString(String str) {
-		return "";
+		String reversed = "";
+
+		for (int i = str.length() - 1; i >= 0; i--) {
+			reversed += str.charAt(i);
+		}
+
+		return reversed;
 		// complete the method
 	}
 		
 	public static void main(String[] args) 
 	{
 		System.out.println("****************************************");
-		System.out.println("Math Trick Machine")
+		System.out.println("Math Trick Machine");
 
         //	1.	Generate a random 3-digit number so that the first and third digits differ by more than one.
 		int num = getRandomNum();
@@ -136,9 +146,10 @@ public class MathTrick {
 		//  to using the table in the instructions.
         String str = String.valueOf(difference);
 		String replaced = replaceLetter(str);
+		System.out.println("7. Replaced string: " + replaced);
 
         //	8.	Now reverse the letters in the string to read your message backward.
 		String reversedString = reverseString(replaced);
-
+		System.out.println("8. Reversed string: " + reversedString);
 	} 
 } 
