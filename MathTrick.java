@@ -78,7 +78,13 @@ public class MathTrick {
 	//		 loop through the original word   
 	//		 add one letter at time to the new variable using concatenation and .substring()
 	public static String reverseString(String str) {
-		return "";
+		String reversed = "";
+
+		for (int i = str.length() - 1; i >= 0; i--) {
+			reversed+= str.charAt(i);
+		}
+
+		return reversed;
 		// complete the method
 	}
 		
