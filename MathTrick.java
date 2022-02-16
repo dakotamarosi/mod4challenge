@@ -84,22 +84,14 @@ public class MathTrick {
 
 	// Step 4: Add reversed number to the difference
 	public static int diffPlusRev (int num) {
-		// Declare and initialize diff+rev variable
+		// Declare and initialize various variables
 		int diffPlusRev = 0;
-
-		// Declare and initialize difference var
 		int difference = 0;
-
-		// Declare and initialize the number in reverse
 		int reversedNumber = 0;
 
-		// Find the last digit
+		// Find the first, last, and middle digits
 		int lastDigit = num%10;
-
-		// Find the middle digit
 		int middleDigit = (int)num/10;
-		
-		// Find the first digit
 		int firstDigit = num/100;
 
 		// Find the difference
@@ -122,7 +114,7 @@ public class MathTrick {
 		return diffPlusRev;
 	}
 	// Step 5: Multiply the original number by one million
-	public static int multipleByMillion() {	
+	public static int multipleByMillion(int num) {	
 		// Declare and initialize variable
 		int million = 0;
 
@@ -133,7 +125,16 @@ public class MathTrick {
 
         }
 
+	
+	// Step 6: Subtract by various numbers??? 
+	public static int subtractingStuff(int num) {	
+		// Declare and initialize variable
+		int subtractBy733 = num - 733;
+		int subtractBy361 = num - 361;
+		int subtractBy573 = num - 573;
 		
+
+        }
 
 	// Step 7) replace characters in a String according to the chart
 	// Hint: Loop through the String and "replace" the numbers with the corresponding letter
