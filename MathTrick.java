@@ -118,7 +118,7 @@ public class MathTrick {
 		million = num * 1000000;
 
 		// Declare and initialize variable
-		int subtractornator = million - 733,361,573;
+		int subtractornator = million - 733361573;
 
 		return subtractornator;
         }
