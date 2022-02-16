@@ -48,7 +48,7 @@ public class MathTrick {
 		int firstDigit = num/100;
 
 		// Find the middle digit
-		int middleDigit = (int)num/10;
+		int middleDigit = (num/10) % 10;
 
 		// Create reversed number using digits
 		reversedNumber += lastDigit;
