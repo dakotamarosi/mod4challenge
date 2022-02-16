@@ -96,32 +96,6 @@ public class MathTrick {
 		diffPlusRev = reversedNumber + difference;
 		return diffPlusRev;
 	}
-	// Step 5: Multiply the original number by one million
-	public static int multipleByMillion(int num) {	
-		// Declare and initialize variable
-		int million = 0;
-
-		// Multiple the original number by one million
-		million = num * 1000000;
-
-		return million;
-
-        }
-
-	
-	// Step 6: Subtract by various numbers??? 
-	public static int subtractingStuff(int num) {	
-		// Declare and initialize variable
-		int million = 0;
-
-		// Multiple the original number by one million
-		million = num * 1000000;
-
-		// Declare and initialize variable
-		int subtractornator = million - 733361573;
-
-		return subtractornator;
-        }
 
 	// Step 7) replace characters in a String according to the chart
 	// Hint: Loop through the String and "replace" the numbers with the corresponding letter
