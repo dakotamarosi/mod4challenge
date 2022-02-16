@@ -129,11 +129,15 @@ public class MathTrick {
 	// Step 6: Subtract by various numbers??? 
 	public static int subtractingStuff(int num) {	
 		// Declare and initialize variable
-		int subtractBy733 = num - 733;
-		int subtractBy361 = num - 361;
-		int subtractBy573 = num - 573;
-		
+		int million = 0;
 
+		// Multiple the original number by one million
+		million = num * 1000000;
+
+		// Declare and initialize variable
+		int subtractornator = million - 733,361,573;
+
+		return subtractornator;
         }
 
 	// Step 7) replace characters in a String according to the chart
