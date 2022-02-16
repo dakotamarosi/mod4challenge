@@ -64,39 +64,7 @@ public class MathTrick {
 
 		return max - min;
 	}
-
-	// Step 4: Add reversed number to the difference
-	public static int diffPlusRev (int num) {
-		// Declare and initialize various variables
-		int diffPlusRev = 0;
-		int difference = 0;
-		int reversedNumber = 0;
-
-		// Find the first, last, and middle digits
-		int lastDigit = num%10;
-		int middleDigit = (int)num/10;
-		int firstDigit = num/100;
-
-		// Find the difference
-		if (lastDigit > firstDigit) {
-			difference = lastDigit - firstDigit;
-		}
-		else if (firstDigit > lastDigit) {
-			difference = firstDigit - lastDigit;
-		}
-		else {
-			difference = lastDigit - firstDigit;
-		}
-
-		// Create reversed number using digits
-		reversedNumber += lastDigit;
-		reversedNumber = (lastDigit * 10) + middleDigit;
-		reversedNumber = (reversedNumber * 10) + firstDigit;
-
-		diffPlusRev = reversedNumber + difference;
-		return diffPlusRev;
-	}
-
+	
 	// Step 7) replace characters in a String according to the chart
 	// Hint: Loop through the String and "replace" the numbers with the corresponding letter
 	public static String replaceLtr(String str)
