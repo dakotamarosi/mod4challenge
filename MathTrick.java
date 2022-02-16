@@ -59,56 +59,86 @@ public class MathTrick {
 	
 	// Step 3: Find the difference between the larger and smaller number
 	public static int difference(int num1, int num2) {
+		// Declare variables that determine min and max
 		int min = Math.min(num1, num2);
 		int max = Math.max(num1, num2);
 
 		return max - min;
 	}
 	
-	// Step 7) replace characters in a String according to the chart
+	// Step 7: replace characters in a String according to the chart
 	// Hint: Loop through the String and "replace" the numbers with the corresponding letter
-	public static String replaceLtr(String str)
+	public static String replaceLetter(String str)
 	{
+		String zero = "Y";
+		String one = "M";
+		String two = "P";
+		String three = "L";
+		String four = "R";
+		String five = "O";
+		String six = "F";
+		String sevne = "A";
+		String eight = "I";
+		String nine = "B";
+		
+		int length = str.length();
+		int counter = 0;
+
+		while (counter < length) {
+			
+		}
+
+
 		return "";
 		// complete the method		
 	}
 	
-	// Step 8) reverse the letters in a String
+	// Step 8: reverse the letters in a String
 	// Hint: start with an empty String variable 
 	//		 loop through the original word   
 	//		 add one letter at time to the new variable using concatenation and .substring()
 	public static String reverseString(String str) {
-		String reversed = "";
-
-		for (int i = str.length() - 1; i >= 0; i--) {
-			reversed+= str.charAt(i);
-		}
-
-		return reversed;
+		return "";
 		// complete the method
 	}
 		
 	public static void main(String[] args) 
 	{
-        //		1.	Generate a random 3-digit number so that the first and third digits differ by more than one.
+		System.out.println("****************************************");
+		System.out.println("Math Trick Machine")
+
+        //	1.	Generate a random 3-digit number so that the first and third digits differ by more than one.
 		int num = getRandomNum();
-        //		2.	Now reverse the digits to form a second number.
+		System.out.println("1. The starting number: " + num);
+
+        //	2.	Now reverse the digits to form a second number.
         int reversed = reverseDigits(num);
-        //		3.	Subtract the smaller number from the larger one.
+		System.out.println("2. The reversed number: " + reversed);
+
+        //	3.	Subtract the smaller number from the larger one.
         int difference = difference(num, reversed);
-        //		4.	Now reverse the digits in the answer you got in step 3 and add it to that number.
+		System.out.println("3. The difference of these two numbers: " + difference);
+
+        //	4.	Now reverse the digits in the answer you got in step 3 and add it to that number.
 		difference += reverseDigits(difference);
-        //		5.	Multiply by one million.
+		System.out.println("4. The reversed number added to the difference: " + difference);
+
+        //	5.	Multiply by one million.
         difference *= 1000000;
-        //		6.	Subtract 733,361,573.
+		System.out.println("5. That number multipled by a million: " + difference);
+
+        //	6.	Subtract 733,361,573.
         difference -= 733361573;
-        //		7.	Convert the number to a string in order to replace the numbers with letters.
-        // 				Ex: String str = String.valueOf(myNumber);
-        //			Then, replace each of the digits in your answer, with the letter it corresponds to using the table in the instructions.
+		System.out.println("6. The difference subtracted by 733,361,573: " + difference);
+
+        //	7.	Convert the number to a string in order to replace the numbers with letters.
+        //	Then, replace each of the digits in your answer, with the letter it corresponds 
+		//  to using the table in the instructions.
         String str = String.valueOf(difference);
-		String replaced = replaceLtr(str);
+		String replaced = replaceLetter(str);
+
+        //	8.	Now reverse the letters in the string to read your message backward.
 		String reversedString = reverseString(replaced);
-        //		8.	Now reverse the letters in the string to read your message backward.
-		System.out.println(reversedString);
-	} // end main
-} // end class
+
+	} 
+} 
