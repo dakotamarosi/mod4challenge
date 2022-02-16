@@ -118,11 +118,22 @@ public class MathTrick {
 		reversedNumber = (lastDigit * 10) + middleDigit;
 		reversedNumber = (reversedNumber * 10) + firstDigit;
 
-		diffPlusRev = reversedNumber 
-
-
-		return 0;
+		diffPlusRev = reversedNumber + difference;
+		return diffPlusRev;
 	}
+	// Step 5: Multiply the original number by one million
+	public static int multipleByMillion() {	
+		// Declare and initialize variable
+		int million = 0;
+
+		// Multiple the original number by one million
+		million = num * 1000000;
+
+		return million;
+
+        }
+
+		
 
 	// Step 7) replace characters in a String according to the chart
 	// Hint: Loop through the String and "replace" the numbers with the corresponding letter
